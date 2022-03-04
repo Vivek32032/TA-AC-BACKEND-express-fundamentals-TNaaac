@@ -7,9 +7,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 app.use(express.static(__dirname + '/public'))
 
-app.get('/admin',(req,res,next)=>{
-    res.statusCode = 404;
-    next('page not found')
+app.use("/admin",(req,res,next)=>{
+    next('Unauthorized to access')
 })
 
 app.get("/",(req,res)=>{
@@ -20,10 +19,12 @@ app.get('/about',(req,res)=>{
     res.sendFile(__dirname +'index.html' )
 })
 
+app.use((req,res,next)=>{
+    res.send('Page not found')
+})
 
-
-app.get((err,req,res,next)=>{
-    res.send(err);
+app.use((err,req,res,next)=>{
+    res.status(500).send(err);
 })
 
 
