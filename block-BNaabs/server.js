@@ -15,7 +15,7 @@ app.get('/new',(req,res)=>{
 })
 
 app.post('/new',(req,res)=>{
-    res.send(req.body);
+    res.json(req.body); 
 })
 
 app.get('/users/:username',(req,res)=>{
