@@ -1,0 +1,14 @@
+{
+    "name": "manual-package-json",
+    "version": "1.0.0",
+    "description": "",
+    "main": "",
+    "scripts": {
+      "test": "--passWithNoTests"
+    },
+    "author": "Vivek",
+    "license": "GNU GPL V3",
+    "dependencies": {
+    }
+  }
+  
