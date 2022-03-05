@@ -1,4 +1,4 @@
-writeCode
+zwriteCode
 
 Q. Create a scaffold express application from the scratch with necessary middlewares and routes
 
